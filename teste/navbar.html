@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        li {
+            background-color: transparent;
+            padding: 10px;
+        }
+
+        li:hover {
+            background-color: rgb(4, 4, 132);
+            border-radius: 15px;
+            transition: 0.3s;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #04A7C6;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 8vh;
+        }
+
+        #logo {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-left: 3vw;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        ul#nav-list {
+            list-style: none;
+            display: flex;
+            gap: 4vw;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #hamburger {
+            display: none;
+            padding-block: 20px;
+            cursor: pointer;
+        }
+
+        #hamburger div {
+            width: 32px;
+            height: 2px;
+            margin: 8.5px;
+            background-color: white;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 999px) {
+            body {
+                overflow-x: hidden;
+            }
+            #nav-list {
+                position: absolute;
+                top: 8vh;
+                right: 0;
+                width: 50vw;
+                height: 92vh;
+                background-color: #04A7C6;
+                flex-direction: column;
+                font-size: 5vw;
+                justify-content: space-around;
+                transform: translateX(100%);
+            }
+            #nav-list li {
+                opacity: 0;
+            }
+            #hamburger {
+                display: block;
+            }
+            #nav-list.active {
+                transform: translateX(0);
+            }
+            @keyframes navLinkFade {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" id="logo">Título do Site</a>
+            <div id="hamburger">
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+            </div>
+            <ul id="nav-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Produto</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </nav>
+        <main></main>
+        <script>
+            const hamburger = document.querySelector('#hamburger')
+            const nav = document.querySelector('#nav-list')
+
+            hamburger.addEventListener('click', ativar) 
+            
+            function ativar() {
+                nav.classList.toggle('active')
+            }
+        </script>
+    </header>
+</body>
+</html>
