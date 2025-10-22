@@ -17,14 +17,11 @@
     /* fontes */
     
 }
-body
-{
-    background-image: url(../midia/img/ceubackground.webp);
-}
 
 main
 {
     background-color: var(--cor00);
+
 }
 
 article
