@@ -1,4 +1,14 @@
+@font-face {
+    font-family: Micross;
+    src: url('../midia/fontes/micross.ttf');
+}
 
+@font-face {
+    font-family: Windows;
+    src: url('../midia/fontes/windows-bold[1].ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
     /* cor */
@@ -15,7 +25,24 @@
     --cor10: #9E6E00;
 
     /* fontes */
-    
+    --fonte01: Micross, Arial, Helvetica, sans-serif;
+    --fonte02: Windows, Arial, Helvetica, sans-serif;
+    --fonte3: "VT323";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor02);
+    background-image: url(''); /*coloca o background*/ 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 92%;
 }
 
 main
