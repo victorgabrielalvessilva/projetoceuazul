@@ -37,7 +37,7 @@
 
 body {
     background-color: var(--cor02);
-    background-image: url(''); /*coloca o background*/ 
+    background-image: url(../midia/img/ceuback.jpg); /*coloca o background*/ 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,6 +48,9 @@ body {
 main
 {
     background-color: var(--cor00);
+    width: 900px;
+    margin: auto;
+    
 
 }
 
@@ -57,8 +60,7 @@ article
     font-size: 13px;
     width: 50%;
     margin-bottom: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     padding: 10%;
     
    
