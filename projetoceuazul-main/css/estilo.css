@@ -39,8 +39,9 @@ header {
     top: 0;
     max-width: 1200px;
     min-width: 320px;
-    max-height: 170px;
-    min-height: 50px;
+    max-height: 180px;
+    min-height: 70px;
+    background: var(--cor07) url(../midia/img/ceudouradobanner.webp) top center fixed;
     margin: auto;
     z-index: 2;
     border: 1px solid black;
@@ -56,8 +57,10 @@ header a {
 }
 
 img#logo {
-    width: 12vw;
-    margin-inline: 2vw;
+    display: block;
+    object-fit: cover;
+    width: 250px;
+    margin-inline: 1vw;
 }
 
 nav {
@@ -66,14 +69,25 @@ nav {
 }
 
 ul#nav-list a {
-    background-color: rgba(0, 0, 0, 0.462);
     padding: 5px;
     border-radius: 10px;
     font-size: 2vw;
     text-align: center;
+    background-color: transparent;
+    padding: 2px;
+}
+
+ul#nav-list a:hover {
+    color: var(--cor08);
+    font-weight: bold;
+    background-color: transparent;
+    padding: 2px;
 }
 
 ul#nav-list {
+    background-color: var(--cor02);
+    padding: 5px;
+    border-radius: 10px;
     list-style: none;
     display: flex;
     gap: 4vw;
