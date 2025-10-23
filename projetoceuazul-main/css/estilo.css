@@ -20,7 +20,6 @@
     --cor05: #005261;
     --cor06: #FFF1CF;
     --cor07: #FFCB50;
-    --cor07opaca: rgb(255, 203, 80, 0.8);
     --cor08: #FFB300;
     --cor09: #E29F00;
     --cor10: #9E6E00;
@@ -37,16 +36,18 @@
 }
 
 header {
-    height: 8vh;
     top: 0;
     max-width: 1200px;
     min-width: 320px;
-    height: 18vh;
+    max-height: 170px;
+    min-height: 50px;
     margin: auto;
-    background: var(--cor07) url(../midia/img/ceuazulbanner.webp) right center no-repeat;
-    background-size: 80%;
-
+    z-index: 2;
+    border: 1px solid black;
+    border-bottom-color: transparent;
     /*linear-gradient(to right, var(--cor07opaca) 5%, rgba(255, 202, 79, 0.471), transparent 90%), */
+
+    /*var(--cor07) url(../midia/img/ceuazulbanner.webp)*/
 }
 
 header a {
@@ -82,6 +83,7 @@ ul#nav-list {
 
 body {
     background-color: var(--cor02);
+
     background-image: url(../midia/img/ceuback.jpg); 
     background-position: center center;
     background-repeat: no-repeat;
@@ -93,21 +95,35 @@ body {
 
 main {
     background-color: var(--cor00);
-    max-width: 1000px;
+    max-width: 1200px;
     min-width: 320px;
+    border: 1px solid black;
+    border-top-color: transparent;
     margin: auto;
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.641);
+    z-index: 1;
 }
 
-article {
+section.quadradoazul {
     background-color: var(--cor01);
+    max-width: 850px;
+    min-width: 320px;
+    margin: auto;
+    padding: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+article {
+    background-color: var(--cor02);
     font-size: 2vw;
-    min-width: 240px;
-    max-width: 700px;
+    min-width: 120px;
+    max-width: 500px;
     margin: auto;
     margin-bottom: 20px;
     padding: 70px
