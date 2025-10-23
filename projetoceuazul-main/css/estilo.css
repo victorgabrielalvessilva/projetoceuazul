@@ -37,7 +37,7 @@
 
 body {
     background-color: var(--cor02);
-    background-image: url(../midia/img/ceuback.jpg); /*coloca o background*/ 
+    background-image: url(../midia/img/ceuback.jpg); 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
