@@ -57,7 +57,7 @@ header a {
 }
 
 img#logo {
-    max-width: 280px;
+    max-width: 200px;
     min-width: 100px;
     margin-inline: 1vw;
 }
@@ -70,17 +70,15 @@ nav {
 ul#nav-list a {
     padding: 5px;
     border-radius: 10px;
-    font-size: 2vw;
+    font-size: 1.7em;
     text-align: center;
     background-color: transparent;
-    padding: 2px;
+    padding: 3px;
 }
 
-ul#nav-list a:hover {
-    color: var(--cor08);
-    font-weight: bold;
-    background-color: transparent;
-    padding: 2px;
+ul#nav-list li:hover {
+    background-color: var(--cor08);
+    padding: 3px;
 }
 
 ul#nav-list {
@@ -144,7 +142,7 @@ section.quadradoazul {
     padding: 70px
 }
 
-div#hamburger {
+#hamburger {
     cursor: pointer;
     background-color: var(--cor02);
     max-height: 54px;
@@ -159,29 +157,38 @@ div#hamburger div {
    height: 4px;
    background-color: var(--cor00);
    margin: 9px;
+   border-radius: 10px;
 }
 
 div#hamburger:hover {
     background-color: var(--cor08);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 999px) {
     body {
         overflow-x: hidden;
+    }
+    #hamburger {
+        display: block;
+        z-index: 45;
     }
     #nav-list a {
         font-size: 5em;
     }
     #nav-list {
         position: absolute;
-        top: 8vh;
+        top: 5vh;
         right: 0;
         width: 100vw;
         height: 80vh;
-        margin-bottom: 8vh;
+        margin-block: 8vh;
         background-color: var(--cor02);
         flex-direction: column;
         justify-content: space-around;
+        transform: translateX(100%);
+        z-index: 3;
+    }
+    #nav-list.active {
         transform: translateX(0%);
     }
 }
