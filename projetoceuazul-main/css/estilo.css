@@ -67,23 +67,28 @@ nav {
     justify-content: space-between;
 }
 
+ul#nav-list li {
+    padding-block: 25px;
+}
+
 ul#nav-list a {
+    max-width: 233px;
     padding: 5px;
-    border-radius: 10px;
     font-size: 1.7em;
     text-align: center;
     background-color: transparent;
-    padding: 3px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-ul#nav-list li:hover {
+ul#nav-list a:hover {
     background-color: var(--cor08);
-    padding: 3px;
 }
 
 ul#nav-list {
     background-color: var(--cor02);
-    padding: 5px;
+    padding-inline: 25px;
+    margin: 10px;
     border-radius: 10px;
     list-style: none;
     display: flex;
@@ -93,7 +98,7 @@ ul#nav-list {
 }
 
 body {
-    background: var(--cor02) url(../midia/img/ceuback.jpg) center center no-repeat fixed;
+    background: var(--cor01) url(../midia/img/ceuback.jpg) center center no-repeat fixed;
     background-size: cover;
     padding-inline: 30px;
 }
@@ -164,13 +169,12 @@ div#hamburger:hover {
     background-color: var(--cor08);
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1132px) {
     body {
         overflow-x: hidden;
     }
     #hamburger {
         display: block;
-        z-index: 45;
     }
     #nav-list a {
         font-size: 5em;
@@ -188,7 +192,7 @@ div#hamburger:hover {
         transform: translateX(100%);
         z-index: 3;
     }
-    #nav-list.active {
-        transform: translateX(0%);
+    ul#nav-list.active {
+        transform: translateX(3%);
     }
 }
