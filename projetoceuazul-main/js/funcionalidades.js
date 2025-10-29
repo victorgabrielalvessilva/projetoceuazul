@@ -1,5 +1,10 @@
-//Pra deixar o botão amarelo indicando a página atual
+// Menu hamburger
 
-//Pra noticia abrir e fechar
+const hamburger = document.querySelector('#hamburger');
+const nav = document.querySelector('#nav-list');
 
-let noticia = document.querySelectorAll('article#quadradinho')
+hamburger.addEventListener('click', ativarmenu())
+
+function ativarmenu() {
+    nav.classList.toggle('.active')
+}
