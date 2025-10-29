@@ -116,7 +116,7 @@ main {
 }
 
 section.quadradoazul {
-    background-image: linear-gradient();
+    background-image:linear-gradient(to left,#e0f0f3,  #52b8cc);
     max-width: 850px;
     min-width: 320px;
     margin: auto;
@@ -128,7 +128,7 @@ section.quadradoazul {
 .titulo {
     text-align: center;
     color: var(--cor00);
-    background-color: var(--cor09);
+    background-image: radial-gradient(#ffbe26, #eb6c04);
     background-size: 10px;
     margin-bottom: 30px;
     font-size: 7vw;
@@ -138,10 +138,17 @@ section.quadradoazul {
 .quadradinho {
     background-color: var(--cor02);
     min-width: 120px;
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     margin-bottom: 20px;
     padding: 70px
+}
+.centro {
+    text-align: center;
+}
+
+h2#bord {
+    margin-bottom: 100px;
 }
 
 div#hamburger {
