@@ -1,10 +1,8 @@
 // Menu hamburger
-
-const hamburger = document.querySelector('#hamburger');
-const nav = document.querySelector('#nav-list');
-
-hamburger.addEventListener('click', ativarmenu())
-
-function ativarmenu() {
-    nav.classList.toggle('.active')
-}
+function abrirmenu() {
+            document.querySelector('#nav-list').classList.toggle('active');
+            document.querySelector('#hamburger').classList.toggle('active')
+            document.querySelector('#barra02').classList.toggle('active')
+            document.querySelector('#barra01').classList.toggle('active')
+            document.querySelector('#barra03').classList.toggle('active')
+        }

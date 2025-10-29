@@ -79,6 +79,7 @@ ul#nav-list a {
     background-color: transparent;
     padding: 10px;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
 ul#nav-list a:hover {
@@ -150,17 +151,18 @@ section.quadradoazul {
     text-align: center;
 }
 
-h2#bord {
-    margin-bottom: 100px;
+h2.subtitulo {
+    margin-block: 20px;
 }
 
 #hamburger {
     cursor: pointer;
     background-color: var(--cor02);
-    max-height: 54px;
+    max-height: 60px;
     margin: 5vh;
     border-radius: 10px;
     display: none;
+    transition: 0.3s;
     
 }
 
@@ -176,7 +178,7 @@ div#hamburger:hover {
     background-color: var(--cor08);
 }
 
-@media (max-width: 1132px) {
+@media (max-width: 1150px) {
     body {
         overflow-x: hidden;
     }
@@ -199,7 +201,24 @@ div#hamburger:hover {
         transform: translateX(100%);
         z-index: 3;
     }
-    ul#nav-list.active {
-        transform: translateX(3%);
+    #nav-list.active {
+        transform: translateX(5%);
     }
+    #hamburger.active {
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        left: 46.3%;
+        margin: auto;
+    }
+    #barra01.active {
+        transform: translateY(12px) rotateZ(45deg);
+    }
+    #barra02.active {
+        opacity: 0;
+    }
+    #barra03.active {
+        transform: translateY(-13px) rotateZ(-45deg);
+    }
+
 }
