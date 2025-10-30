@@ -60,6 +60,7 @@ img#logo {
     max-width: 200px;
     min-width: 100px;
     margin-inline: 1vw;
+    user-select: none;
 }
 
 nav {
@@ -80,6 +81,8 @@ ul#nav-list a {
     padding: 10px;
     border-radius: 10px;
     transition: 0.3s;
+    text-align: center;
+    
 }
 
 ul#nav-list a:hover {
@@ -89,13 +92,15 @@ ul#nav-list a:hover {
 ul#nav-list {
     background-color: var(--cor02);
     padding-inline: 25px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 10px;
     list-style: none;
     display: flex;
     gap: 4vw;
     align-items: center;
     margin: auto;
+    user-select: none;
+
 }
 
 body {
@@ -145,8 +150,27 @@ section.quadradoazul {
     max-width: 800px;
     margin: auto;
     margin-bottom: 20px;
-    padding: 70px
+    color: var(--cor00);
+    border-radius: 10px;
 }
+
+div.quadradinho {
+    font-size: 5vw;
+    padding: 2.5vw;
+    text-align: center;
+}
+
+div.quadradinho input {
+    max-width: 15vw;
+    border: 1px solid black;
+    font-size: 5vw;
+    text-align: center;
+}
+
+article.quadradinho {
+    padding: 70px;
+}
+
 .centro {
     text-align: center;
 }
@@ -169,6 +193,7 @@ h2.subtitulo {
 div#hamburger div {
    width: 32px;
    height: 4px;
+   user-select: none;
    background-color: var(--cor00);
    margin: 9px;
    border-radius: 10px;
@@ -178,7 +203,7 @@ div#hamburger:hover {
     background-color: var(--cor08);
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 999px) {
     body {
         overflow-x: hidden;
     }
@@ -190,26 +215,29 @@ div#hamburger:hover {
     }
     #nav-list {
         position: absolute;
-        top: 5vh;
+        display: none;
         right: 0;
         width: 100vw;
-        height: 80vh;
-        margin-block: 8vh;
+        height: 100vh;
         background-color: var(--cor02);
         flex-direction: column;
         justify-content: space-around;
-        transform: translateX(100%);
+        align-items: center;
         z-index: 3;
+        gap: 0;
+        clip-path: circle(0px);
+        transition: 0.4s ease-out;
+        pointer-events: none;
     }
     #nav-list.active {
-        transform: translateX(5%);
+        clip-path: circle(101%);
+        z-index: 3;
+        gap: 0;
+        pointer-events: all;
     }
     #hamburger.active {
-        display: block;
-        position: absolute;
-        bottom: 30px;
-        left: 46.3%;
-        margin: auto;
+        z-index: 4;
+        background-color: var(--cor07);
     }
     #barra01.active {
         transform: translateY(12px) rotateZ(45deg);

@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prefeitura Municipal de Céu Azul</title>
+    <link rel="shortcut icon" href="../midia/img/mini-ceuazullogo230px.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/estilo.css">
     <script src="../js/funcionalidades.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <img src="../midia/img/ceuazullogo.webp" alt="logo da Prefeitura de Céu Azul" id="logo">
+            <picture>
+                <source media="(max-width: 230px)" srcset="../midia/img/ceuazulladinho">
+                <img src="../midia/img/ceuazullogo.webp" alt="logo da Prefeitura de Céu Azul" id="logo">
+            </picture>
             <div id="hamburger" onclick="abrirmenu()">
                 <div class="barra" id="barra01"></div>
                 <div class="barra" id="barra02"></div>
@@ -25,7 +29,14 @@
         </nav>
     </header>
     <main>
-        <section class="quadradoazul"></section>
+        <section class="quadradoazul">
+            <div class="quadradinho">
+                <p>Na nossa gerência, estamos ao total de:</p>
+                <input class="contador" type="text" readonly> 
+                <p>dias <br> sem acidentes com exquisitices <br> nosso recorde era de <input type="text" value="45000000000000000000000000000000" readonly></p>
+
+            </div>
+        </section>
     </main>
 </body>
 </html>
